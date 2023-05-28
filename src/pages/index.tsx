@@ -5,8 +5,6 @@ import Link from "next/link";
 import { api } from "~/utils/api";
 
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from Sharique Changes" });
-
   return (
     <>
       <Head>
@@ -45,7 +43,8 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col items-center gap-2">
             <p className="text-2xl text-white">
-              {hello.data ? hello.data.greeting : "Loading tRPC query..."}
+              {/* {hello.data ? hello.data.greeting : "Loading tRPC query..."} */}
+              Deployed! Will work on it.
             </p>
             <AuthShowcase />
           </div>
