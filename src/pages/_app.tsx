@@ -3,6 +3,9 @@ import { SessionProvider } from "next-auth/react";
 import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 import "~/styles/globals.css";
+import Head from "next/head";
+import TopNav from "~/components/TopNav";
+
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -10,7 +13,15 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      <Component {...pageProps} />
+      <Head>
+        <title>T3 | Application</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+        <TopNav />
+      <div className="container mx-auto">
+        <Component {...pageProps} />
+      </div>
     </SessionProvider>
   );
 };
