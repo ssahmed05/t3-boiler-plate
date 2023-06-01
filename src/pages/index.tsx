@@ -2,9 +2,11 @@ import { type NextPage } from "next";
 
 const Home: NextPage = () => {
   return (
-    <>
-    <h1>Hi</h1>
-    </>
+    <div className="flex h-[calc(100vh-64px)]">
+      <div className="m-auto">
+        <p className="text-3xl">Hi, This is home page</p>
+      </div>
+    </div>
   );
 };
 
