@@ -29,6 +29,9 @@ const TopNav: FC = () => {
               <Link href={'/about'} className={asPath == '/about' ? activeLinks : nonActiveLinks} aria-current="page">About</Link>
             </li>
             <li>
+              <Link href={'/to-do'} className={asPath == '/to-do' ? activeLinks : nonActiveLinks} aria-current="page">To Do</Link>
+            </li>
+            <li>
               {
                 sessionData?.user ?
                   <Link href="#" onClick={() => void signOut()} className={nonActiveLinks}>Logout</Link>
